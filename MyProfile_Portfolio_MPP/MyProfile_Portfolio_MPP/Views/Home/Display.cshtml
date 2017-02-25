@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Display";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@*@MyProfile_Portfolio_MPP.Controllers.HomeController*@
+<h2>Display</h2>
+@using (Html.BeginForm("Index", "Display"))
+{
+    foreach (var p in ViewBag.Items)
+    {
+        <label for="@p">@p</label>
+        <input type="checkbox" name="@p" />
+    }
+
+    <div>
+        <input id='btnSubmit' type="submit" value='submit' />
+    </div>
+}
+
